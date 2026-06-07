@@ -34,3 +34,6 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Local screenshots not for GitHub
+public/screenshot_terminal_install.png
