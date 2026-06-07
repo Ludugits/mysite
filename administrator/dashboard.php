@@ -152,7 +152,13 @@ if (isset($_GET['logout'])) {
 <!-- SIDEBAR -->
 <div class="admin-sidebar">
   <a href="#" class="sidebar-brand">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Joomla_logo.svg/2560px-Joomla_logo.svg.png" alt="Joomla">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="50 20 50 60" width="32" height="32" class="me-2">
+      <!-- 4 colorful links -->
+      <circle cx="70" cy="50" r="11" fill="#f19020" opacity="0.95"/>
+      <circle cx="90" cy="50" r="11" fill="#599e32" opacity="0.95"/>
+      <circle cx="80" cy="40" r="11" fill="#1b65b3" opacity="0.95"/>
+      <circle cx="80" cy="60" r="11" fill="#e9bf1e" opacity="0.95"/>
+    </svg>
     <span class="fw-bold">Joomla! 5.0</span>
   </a>
   <div class="sidebar-menu">

@@ -65,7 +65,14 @@ if (isset($_POST['login'])) {
 
 <div class="login-card text-center">
   <!-- Логотип Joomla -->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Joomla_logo.svg/2560px-Joomla_logo.svg.png" alt="Joomla! Logo" class="joomla-logo img-fluid">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="220" class="mb-4">
+    <!-- Joomla style 4 links -->
+    <circle cx="100" cy="40" r="14" fill="#f19020" opacity="0.9"/>
+    <circle cx="124" cy="40" r="14" fill="#599e32" opacity="0.9"/>
+    <circle cx="112" cy="28" r="14" fill="#1b65b3" opacity="0.9"/>
+    <circle cx="112" cy="52" r="14" fill="#e9bf1e" opacity="0.9"/>
+    <text x="150" y="50" font-family="-apple-system, system-ui, sans-serif" font-weight="800" font-size="34" fill="#333">Joomla!</text>
+  </svg>
   
   <h4 class="mb-4 text-dark fw-bold">Панель управления RetroAuto</h4>
 
