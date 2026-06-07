@@ -1,0 +1,303 @@
+/* =============================================
+   RetroAuto — Файл кастомных стилей
+   Дополняет Bootstrap 5, не заменяет его
+   ============================================= */
+
+/* -----------------------------------------------
+   ПЕРЕМЕННЫЕ / ЦВЕТА БРЕНДА
+----------------------------------------------- */
+:root {
+  --ra-gold:       #d97706;
+  --ra-gold-hover: #b45309;
+  --ra-gold-light: #fef3c7;
+  --ra-dark:       #1c1917;
+  --ra-dark-nav:   #111827;
+  --ra-gray:       #78716c;
+  --ra-bg-light:   #f9fafb;
+}
+
+/* -----------------------------------------------
+   БАЗОВЫЕ СТИЛИ
+----------------------------------------------- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  color: #1f2937;
+}
+
+/* -----------------------------------------------
+   ШАПКА (header)
+----------------------------------------------- */
+.retro-header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid var(--ra-gold-light);
+  z-index: 1030;
+}
+
+/* Логотип SVG */
+.retro-logo-img {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.retro-logo-img:hover {
+  transform: scale(1.08);
+}
+
+/* Текст бренда */
+.retro-brand-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #1f2937;
+  line-height: 1.2;
+}
+.retro-brand-sub {
+  font-size: 0.68rem;
+  color: #6b7280;
+  line-height: 1;
+}
+
+/* Ссылки меню — всегда видимы */
+.retro-nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.8rem;
+  border-radius: 0.375rem;
+  font-size: 0.92rem;
+  color: #374151;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+}
+.retro-nav-link:hover {
+  background-color: var(--ra-gold-light);
+  color: var(--ra-gold);
+}
+.retro-nav-link--active {
+  background-color: var(--ra-gold-light);
+  color: var(--ra-gold-hover) !important;
+  font-weight: 600;
+}
+
+/* Кнопка корзины */
+.retro-cart-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--ra-gold);
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.92rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.retro-cart-btn:hover,
+.retro-cart-btn:focus {
+  background-color: var(--ra-gold-hover);
+  color: #fff;
+  outline: none;
+}
+
+/* Мобильное меню — перенос на следующую строку */
+@media (max-width: 767.98px) {
+  .retro-header nav {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-top: 1px solid var(--ra-gold-light);
+    padding-top: 0.5rem;
+    overflow-x: auto;
+    flex-wrap: nowrap !important;
+  }
+  .retro-header .d-flex.align-items-center.justify-content-between {
+    flex-wrap: wrap;
+  }
+}
+
+/* -----------------------------------------------
+   ФУТЕР
+----------------------------------------------- */
+.retro-footer {
+  background-color: var(--ra-dark-nav);
+  color: #e5e7eb;
+}
+
+.retro-footer-link {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.retro-footer-link:hover {
+  color: var(--ra-gold);
+  text-decoration: underline;
+}
+
+/* -----------------------------------------------
+   КНОПКИ — Bootstrap warning → золотой
+----------------------------------------------- */
+.btn-warning {
+  background-color: var(--ra-gold) !important;
+  border-color: var(--ra-gold) !important;
+  color: #fff !important;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active {
+  background-color: var(--ra-gold-hover) !important;
+  border-color: var(--ra-gold-hover) !important;
+  color: #fff !important;
+}
+
+.btn-outline-warning {
+  color: var(--ra-gold) !important;
+  border-color: var(--ra-gold) !important;
+  background-color: transparent !important;
+}
+.btn-outline-warning:hover,
+.btn-outline-warning:focus {
+  background-color: var(--ra-gold-light) !important;
+  color: var(--ra-gold-hover) !important;
+  border-color: var(--ra-gold-hover) !important;
+}
+
+/* -----------------------------------------------
+   КАРТОЧКИ АВТОМОБИЛЕЙ (каталог, детали)
+----------------------------------------------- */
+.car-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 2px solid #e5e7eb;
+  overflow: hidden;
+}
+.car-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12) !important;
+  border-color: var(--ra-gold);
+}
+
+.car-image {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+.car-card:hover .car-image {
+  transform: scale(1.04);
+}
+
+.price-badge {
+  font-size: 1.4rem;
+  color: var(--ra-gold-hover);
+  font-weight: 700;
+}
+
+/* -----------------------------------------------
+   КАРТОЧКИ ПРЕИМУЩЕСТВ / ЦЕННОСТЕЙ
+----------------------------------------------- */
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.feature-icon {
+  font-size: 2.75rem;
+  color: var(--ra-gold);
+  line-height: 1;
+}
+
+/* -----------------------------------------------
+   ФОРМЫ
+----------------------------------------------- */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--ra-gold);
+  box-shadow: 0 0 0 0.2rem rgba(217, 119, 6, 0.2);
+}
+.form-check-input:checked {
+  background-color: var(--ra-gold);
+  border-color: var(--ra-gold);
+}
+
+/* -----------------------------------------------
+   КОРЗИНА
+----------------------------------------------- */
+.cart-item {
+  transition: background-color 0.2s;
+}
+.cart-item:hover {
+  background-color: #fafafa;
+}
+
+.cart-item-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* -----------------------------------------------
+   ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ
+----------------------------------------------- */
+.specs-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.specs-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.specs-list li:last-child {
+  border-bottom: none;
+}
+
+/* -----------------------------------------------
+   ПУСТОЕ СОСТОЯНИЕ / 404
+----------------------------------------------- */
+.empty-state-icon {
+  width: 96px;
+  height: 96px;
+  background-color: var(--ra-gold-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty-state-icon i {
+  font-size: 3rem;
+  color: var(--ra-gold);
+}
+
+/* -----------------------------------------------
+   УТИЛИТЫ
+----------------------------------------------- */
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+/* -----------------------------------------------
+   АДАПТИВ (мобильные)
+----------------------------------------------- */
+@media (max-width: 767.98px) {
+  .display-3 { font-size: 2.1rem; }
+  .display-4 { font-size: 1.9rem; }
+  .display-5 { font-size: 1.65rem; }
+
+  .car-image  { height: 200px; }
+
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+  }
+}
